@@ -74,4 +74,36 @@ if (searchBtn && wordInput) {
             }                                                   // Закінчення внутрішньої перевірки контейнера
         }                                                       // Закінчення блоку catch
     });                                                         // Закінчення анонімної функції слухача події click
-}                                                               // Закінчення головної перевірки наявності кнопки і поля вводу
+}      
+
+//------
+//  async function fetchWord(query: string): Promise<void> {
+  // Перевіряємо, щоб користувач не вводив порожній запит
+//   if (!query) return;
+
+//   try {
+//     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${query}`);
+    
+//     // Якщо сервер повертає 404 (слово не знайдено)
+//     if (response.status === 404) {
+//       console.log("Такого слова немає в словнику.");
+//       // Тут можна вивести повідомлення на екран замість старого списку
+//       return; 
+//     }
+
+//     // Якщо API впав з 502 або іншою помилкою
+//     if (!response.ok) {
+//       throw new Error("Проблема з сервером API");
+//     }
+
+//     const data = await response.json();
+//     console.log("Знайдене слово:", data);
+    
+//     // Далі передаємо дані у функцію малювання на екрані
+//     // renderDictionary(data);
+
+//   } catch (error) {
+//     // Цей блок перехопить CORS помилки або проблеми з інтернетом
+//     console.error("Помилка під час запиту:", error);
+//   }
+//  }
